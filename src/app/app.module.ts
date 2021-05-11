@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component'
 import { from } from 'rxjs';
 import { ServersComponent } from './servers/servers.component';
+import { FormsModule } from '@angular/forms';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

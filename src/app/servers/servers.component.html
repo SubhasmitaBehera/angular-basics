@@ -1,2 +1,23 @@
-<button class="btn btn-primary" [disabled] = "!allowNewServer">add server</button>
-<p [innerText]="allowNewServer"></p>
+<div class="container">
+    <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+    <!--Event binding-->
+    <input type="text" class="form-control" [(ngModel)]="serverName">
+    <!--Two way binding (property and event) -->
+    <p>{{serverName}}</p>
+    <!--String interpolation-->
+    <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
+        <!-- [disabled] is property binding and (click) is event binding-->
+        add server
+    </button>
+    <p [innerText]="allowNewServer"></p>
+    <!-- <P>{{allowNewServer}}</P> -->
+    <!-- <p>{{serverCreationStatus}}</p> -->
+    <!-- <p *ngIf="serverCreated">Server is created! Server name is {{serverName}}</p> -->
+
+    <!-- ngIf and ngFor are structural attribute.They add aor remove elements -->
+    <p *ngIf="serverCreated; else noServer">Server is created! Server name is {{serverName}}</p>
+    <ng-template #noServer>
+        <p>No server is created!</p>
+    </ng-template>
+</div>
+<app-server></app-server>

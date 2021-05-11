@@ -1,4 +1,6 @@
-<p></p>
-<h1>hii</h1>
-<p>server id {{ serverID}} and status {{serverStatus}}  HEllo {{'MIKI'}}</p>
-<p>Server status called by method call  {{getServerStatus()}}</p>
+<!-- <p></p> -->
+<!-- <h1>hii</h1> -->
+
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online : serverStatus === 'online'}">server id {{ serverID}}
+    and status {{serverStatus}} </p>
+<p>Server status called by method call {{getServerStatus()}}</p>
