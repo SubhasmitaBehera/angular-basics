@@ -1,3 +1,17 @@
 <!-- <app-server></app-server> -->
-<app-servers></app-servers>
+<!-- <app-servers></app-servers> -->
 <!-- <app-users></app-users> -->
+
+
+<div class="container">
+    <app-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)"></app-cockpit>
+    <!-- here  'bpCreated' is the alias of 'blueprintCreated' -->
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- <app-server-element *ngFor="let i of serverElements" [element]="i"></app-server-element> -->
+            <app-server-element *ngFor="let i of serverElements" [srvElement]="i"></app-server-element>
+            <!-- Here 'srvElement' is the alias of 'element'.we can use 'srvElement' or 'element' -->
+        </div>
+    </div>
+</div>

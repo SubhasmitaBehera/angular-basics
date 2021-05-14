@@ -1,6 +1,7 @@
-<!-- <p></p> -->
+<p>This is server app.</p>
 <!-- <h1>hii</h1> -->
 
+<!-- ngStyle is attribute directive .They only change the element they were placed on.-->
 <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online : serverStatus === 'online'}">server id {{ serverID}}
-    and status {{serverStatus}} </p>
-<p>Server status called by method call {{getServerStatus()}}</p>
+    and status {{serverStatus}} {{p}}</p>
+<!-- <p>Server status called by method call {{getServerStatus()}}</p> -->

@@ -8,13 +8,17 @@ import { from } from 'rxjs';
 import { ServersComponent } from './servers/servers.component';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     ServersComponent,
-    UsersComponent
+    UsersComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,

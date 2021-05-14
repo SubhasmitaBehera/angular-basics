@@ -1,5 +1,5 @@
 <div class="container">
-    <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+    <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
     <!--Event binding-->
     <input type="text" class="form-control" [(ngModel)]="serverName">
     <!--Two way binding (property and event) -->
@@ -19,5 +19,11 @@
     <ng-template #noServer>
         <p>No server is created!</p>
     </ng-template>
+
+    <!-- <div *ngFor="let i of servers">{{i}}</div> -->
+    <app-server *ngFor="let i of servers">
+        {{i}}
+    </app-server>
+    <app-server></app-server>
+    <!-- <p>{{i}}</p> -->
 </div>
-<app-server></app-server>
